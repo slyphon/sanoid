@@ -1,3 +1,16 @@
+sanoid (2.0.3~bpo10+2) buster-backports; urgency=medium
+
+  * Change name to slyphon-sanoid, add conflicts with sanoid
+
+ -- Jonathan Simms <slyphon@builder.sly> Sat, 13 Mar 2021 12:55:54 +0000
+
+sanoid (2.0.3~bpo10+1) buster-backports; urgency=medium
+
+  * Rebuild for buster-backports.
+  * Adjust dependencies for using the upstream zfs packages
+
+ -- Jim Salter <slyphon@builder.sly>  Sat, 13 Mar 2021 00:12:54 +0000
+
 sanoid (2.0.3) unstable; urgency=medium
 
   [sanoid]    reverted DST handling and improved it as quickfix (@phreaker0)

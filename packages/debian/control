@@ -1,19 +1,19 @@
-Source: sanoid
+Source: slyphon-sanoid
 Section: utils
 Priority: optional
-Maintainer: Jim Salter <jim@openoid.net>
+Maintainer: Jonathan Simms
 Build-Depends: debhelper (>= 10)
 Standards-Version: 4.1.2
-Homepage: https://github.com/jimsalterjrs/sanoid
-Vcs-Git: https://github.com/jimsalterjrs/sanoid.git
-Vcs-Browser: https://github.com/jimsalterjrs/sanoid
+Homepage: https://github.com/slyphon/sanoid
+Vcs-Git: https://github.com/slyphon/sanoid.git
+Vcs-Browser: https://github.com/slyphon/sanoid
 
-Package: sanoid
+Package: slyphon-sanoid
 Architecture: all
 Depends: libcapture-tiny-perl,
          libconfig-inifiles-perl,
          systemd,
-         zfsutils-linux | zfs,
+         zfs,
          ${misc:Depends},
          ${perl:Depends}
 Recommends: gzip,
@@ -21,4 +21,7 @@ Recommends: gzip,
             mbuffer,
             openssh-client | ssh-client,
             pv
-Description: Policy-driven snapshot management and replication tools
+Conflicts: sanoid
+Description: Policy-driven snapshot management and replication tools. This
+	repackaging allows for use with the openzfs upstream debs, in that it doesn't
+	require zfsutils-linux, which is not provided by upstream.
